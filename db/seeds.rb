@@ -1,20 +1,11 @@
 puts "Destroying ..."
-Monument.destroy_all
+Treehouse.destroy_all
 
 
 
 puts "creating ..."
-Treehouse.new()
+Treehouse.new(name: "Treehouse of Horror", tree_type: "Oak tree", total_occupancy: 5, summary: "Simpsons themed treehouse", address: "Springfield", price: 100)
+Treehouse.new(name: "Cabin in the woods", tree_type: "Redwood tree", total_occupancy: 5, summary: "Haunted treehouse", address: "Vancouver", price: 100)
 
 
-puts "done creating
-
-t.string "tree_type"
-t.integer "total_occupancy"
-t.text "summary"
-t.string "address"
-t.integer "price"
-t.float "latitude"
-t.float "longitude"
-t.datetime "created_at", null: false
-t.datetime "updated_at", null: false
+puts "done creating"
