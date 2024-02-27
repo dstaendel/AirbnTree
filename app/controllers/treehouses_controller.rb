@@ -23,6 +23,24 @@ class TreehousesController < ApplicationController
     end
   end
 
+  def edit
+    @treehouse = Treehouse.find(params[:id])
+  end
+
+  def update
+    @treehouse = Treehouse.find(params[:id])
+    @treehouse.update(treehouse_params)
+    @treehouse.save
+    redirect_to treehouses_path(@task.id)
+
+  end
+
+  def destroy
+    @treehouse = Treehouse.find(params[:id])
+    @treehouse.destroy
+    redirect_to treehouses_path
+  end
+
   private
 
   # def set_treehouse
