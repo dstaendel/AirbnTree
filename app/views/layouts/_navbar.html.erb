@@ -9,7 +9,8 @@
               <a class="nav-link" href="">About</a>
             </li>
             <li class="d-inline-block align-text-top" class="nav-item">
-              <button class="d-inline-block align-text-top">Login</button>
+              <%# <button class="d-inline-block align-text-top">Login</button> %>
+              <%= link_to "Log In", new_user_session_path, class: "d-inline-block align-text-top"%>
         </ul>
       </div>
 </nav>
