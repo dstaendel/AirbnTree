@@ -1,4 +1,6 @@
 class TreehousesController < ApplicationController
+
+
   def index
     @treehouses = Treehouse.all
   end
@@ -23,8 +25,8 @@ class TreehousesController < ApplicationController
 
   private
 
-  # def set_restaurant
-  #   @restaurant = Restaurant.find(params[:id])
+  # def set_treehouse
+  #   @treehouse = Treehouse.find(params[:id])
   # end
 
   def treehouse_params
