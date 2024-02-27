@@ -31,7 +31,7 @@ class TreehousesController < ApplicationController
     @treehouse = Treehouse.find(params[:id])
     @treehouse.update(treehouse_params)
     @treehouse.save
-    redirect_to treehouses_path(@task.id)
+    redirect_to treehouses_path(@treehouse.id)
 
   end
 
@@ -48,6 +48,6 @@ class TreehousesController < ApplicationController
   # end
 
   def treehouse_params
-    params.require(:treehouse).permit(:tree_type, :total_occupancy, :summary, :address, :price, :latitude, :longitude)
+    params.require(:treehouse).permit(:name, :tree_type, :total_occupancy, :summary, :address, :price)
   end
 end

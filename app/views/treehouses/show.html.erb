@@ -7,3 +7,11 @@
         <p>Total occupancy: <%= @treehouse.total_occupancy %></p>
       </div>
 </div>
+
+<%= link_to "Back home", treehouses_path %>
+
+<%= link_to "Edit treehouse", edit_treehouse_path %>
+<%= link_to "Delete",
+  treehouse_path(@treehouse),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this treehouse?"}
+%>
