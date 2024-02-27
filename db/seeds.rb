@@ -15,8 +15,8 @@ Treehouse.create(name: "The Leafy Lookout", tree_type: "Oak tree", total_occupan
 Treehouse.create(name: "The Arboreal Adventure", tree_type: "Cedar tree", total_occupancy: 4, summary: "Perfect treeehouse to bring the kids", address: "Minesota", price: 100)
 
 
-User.create(first_name: "Bruce", last_name: "Smith", email: "smith.one@email.com")
-User.create(first_name: "Carl", last_name: "Anderson", email: "anderson.agent@email.com")
+User.create(first_name: "Bruce", last_name: "Smith", email: "smith@email.com", password: "123456")
+User.create(first_name: "Carl", last_name: "Anderson", email: "anderson@email.com", password: "123456")
 
 
 
