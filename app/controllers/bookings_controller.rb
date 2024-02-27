@@ -1,6 +1,7 @@
 class BookingsController < ApplicationController
 
   def new
+    @treehouse = Treehouse.find(params[:treehouse_id])
     @booking = Booking.new
   end
 
