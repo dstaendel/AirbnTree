@@ -6,10 +6,12 @@ class BookingsController < ApplicationController
   end
 
   def create
+    @treehouse = Treehouse.find(params[:treehouse_id])
     @booking = Booking.new(booking_params)
-
+    @booking.user = User.first
+    # @booking.user = current_user
     if @booking.save
-      redirect_to bookings_path, notice: "Your new booking was successfully created."
+      redirect_to profile_path, notice: "Your new booking was successfully created."
     else
       render :new, status: :unprocessable_entity
     end
@@ -23,14 +25,14 @@ class BookingsController < ApplicationController
     @booking = Booking.find(params[:id])
     @booking.update(booking_params)
     @booking.save
-    redirect_to bookings_path(@booking.id)
+    # redirect_to bookings_path(@booking.id)
 
   end
 
   def destroy
     @booking = Booking.find(params[:id])
     @booking.destroy
-    redirect_to bookings_path, status: :see_other
+    # redirect_to bookings_path, status: :see_other
   end
 
   private
