@@ -76,3 +76,6 @@ group :test do
 end
 
 gem "devise"
+
+  # Connects cloudinary to our app
+gem "cloudinary"
