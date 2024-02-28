@@ -1,7 +1,12 @@
-<% @treehouses.each do |treehouse| %>
-  <li>
-    <%= treehouse.name %>
-  </li>
-<% end %>
+<div class="cards px-5">
+
+  <% @treehouses.each do |treehouse| %>
+    <div class="card">
+      <%= link_to treehouse.name, treehouse_path(treehouse) %>
+    </div>
+  <% end %>
+
+</div>
+
 
 <%= link_to "Add treehouse", new_treehouse_path %>

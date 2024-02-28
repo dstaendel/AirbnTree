@@ -21,4 +21,4 @@ User.create(first_name: "Carl", last_name: "Anderson", email: "anderson@email.co
 
 
 
-puts `Yes! #{@treehouses.size} and two users have been created!`
+puts `Yes!users have been created!`
