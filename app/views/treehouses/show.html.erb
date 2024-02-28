@@ -5,8 +5,11 @@
         <p>Description: <%= @treehouse.summary %></p>
         <p>Address: <%= @treehouse.address %></p>
         <p>Total occupancy: <%= @treehouse.total_occupancy %></p>
+        <p>Price: <%= @treehouse.price %></p>
       </div>
 </div>
+
+<%= link_to "Book this treehouse", new_treehouse_booking_path(@treehouse) %>
 
 <%= link_to "Back home", treehouses_path %>
 
