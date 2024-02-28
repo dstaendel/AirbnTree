@@ -8,8 +8,7 @@ class BookingsController < ApplicationController
   def create
     @treehouse = Treehouse.find(params[:treehouse_id])
     @booking = Booking.new(booking_params)
-    @booking.user = User.first
-    # @booking.user = current_user
+    @booking.user = current_user
     if @booking.save
       redirect_to profile_path, notice: "Your new booking was successfully created."
     else

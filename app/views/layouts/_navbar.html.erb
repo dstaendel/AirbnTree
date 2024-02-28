@@ -11,6 +11,7 @@
             <li class="d-inline-block align-text-top" class="nav-item">
               <%# <button class="d-inline-block align-text-top">Login</button> %>
               <%= link_to "Log In", new_user_session_path, class: "d-inline-block align-text-top"%>
+              <%= link_to "Log Out", destroy_user_session_path, class: "d-inline-block align-text-top", data: {turbo_method: :delete}%>
         </ul>
       </div>
 </nav>

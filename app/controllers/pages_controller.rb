@@ -3,7 +3,7 @@ class PagesController < ApplicationController
   end
 
   def profile
-    @bookings = Booking.all
+    @bookings = Booking.where(user: current_user)
     # @user = current_user
     # @bookings.user =
   end
