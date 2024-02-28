@@ -42,3 +42,48 @@ main {
   margin-top: 150px;
   font-size: 90px;
 }
+
+.treehouse-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.treehouse-info, .treehouse-photos {
+  border-radius: 8px;
+  padding: 20px;
+  width: 80%;
+  max-width: 800px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.treehouse-photos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.treehouse-photo {
+  width: calc(33.333% - 10px);
+  height: auto;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.btn {
+  margin: 5px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+}
+
+.btn-primary { background-color: #007bff; }
+.btn-secondary { background-color: #6c757d; }
+.btn-warning { background-color: #ffc107; }
+.btn-danger { background-color: #dc3545; }
