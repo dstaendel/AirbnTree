@@ -1,9 +1,12 @@
 
 <% @bookings.each do |booking| %>
-  <li>
-    <h3>Booking</h3>
-    <p> From: <%= booking.start_date %> To: From: <%= booking.end_date %></p>
-  </li>
+  <div>
+    <li>
+      <h3>Booking</h3>
+      <p> From: <%= booking.start_date %> To: From: <%= booking.end_date %></p>
+    </li>
+    <%= link_to 'Approve', approve_treehouse_booking_path(@booking, @treehouse), data: {turbo_method: :post}%>
+  </div>
 <% end %>
 
 

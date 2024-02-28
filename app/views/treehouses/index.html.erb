@@ -11,7 +11,7 @@
 
 <% @treehouses.each do |treehouse| %>
   <li>
-    <%= treehouse.name %>
+    <%= link_to treehouse.name, treehouse_path(treehouse) %>
     <div class="treehouse-photos">
       <% treehouse.photos.each do |photo| %>
         <%= image_tag photo, class: "treehouse-photo" %>

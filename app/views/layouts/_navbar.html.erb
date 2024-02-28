@@ -3,14 +3,14 @@
       <div class="navbar-nav">
         <ul id="navbar-right-elements" class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="d-inline-block align-text-top" >
-            <a class="nav-link" href="" id="browse" >Browse Trees</a>
+            <%= link_to "Browse Trees", treehouses_path, class: "nav-link"%>
           </li>
             <li class="d-inline-block align-text-top" class="nav-item">
               <a class="nav-link" href="" id="about">About</a>
             </li>
-            <li class="d-inline-block align-text-top" class="nav-item" id="out">
-              <%= link_to "Log In", new_user_session_path, class: "d-inline-block align-text-top"%>
-              <%= link_to "Log Out", destroy_user_session_path, class: "d-inline-block align-text-top", data: {turbo_method: :delete}%>
+            <li class="d-inline-block align-text-top" class="nav-item">
+              <%= link_to "Log In", new_user_session_path, class: "nav-link"%>
+              <%= link_to "Log Out", destroy_user_session_path, class: "nav-link", data: {turbo_method: :delete}%>
         </ul>
       </div>
 </nav>
