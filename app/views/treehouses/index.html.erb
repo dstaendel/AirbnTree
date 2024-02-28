@@ -1,7 +1,7 @@
 <div class="cards px-5">
 
   <% @treehouses.each do |treehouse| %>
-    <div class="card">
+    <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path treehouse.photos[0].key, height: 300, crop: :fill %>')">
       <%= link_to treehouse.name, treehouse_path(treehouse) %>
     </div>
   <% end %>
