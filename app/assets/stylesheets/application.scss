@@ -25,8 +25,20 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background-image: asset-url('forest-3.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat:repeat;
 }
 
 main {
   flex: 1;
+}
+
+#welcome{
+  color: white;
+  display: flex;
+  justify-content: center;
+  margin-top: 150px;
+  font-size: 90px;
 }
