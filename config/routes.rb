@@ -3,10 +3,6 @@ Rails.application.routes.draw do
   root to: "pages#home"
   get "profile", to: "pages#profile"
   resources :treehouses do
-    resources :bookings, except: [:index, :show] do
-      member do
-        post :approve
-      end
-    end
+    resources :bookings, except: [:index, :show]
   end
 end

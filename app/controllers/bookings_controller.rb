@@ -9,6 +9,7 @@ class BookingsController < ApplicationController
     @treehouse = Treehouse.find(params[:treehouse_id])
     @booking = Booking.new(booking_params)
     @booking.user = current_user
+    @booking.treehouse = @treehouse
     if @booking.save
       redirect_to profile_path, notice: "Your new booking was successfully created."
     else
@@ -34,16 +35,16 @@ class BookingsController < ApplicationController
     # redirect_to bookings_path, status: :see_other
   end
 
-  def approve
-  @booking = Booking.find_by_id(params[:id])
-  @booking.update(state: "approved")
-  if @booking.state == "approved"
-    flash[:success] = "Booking successfully approved"
-    # redirect_to bookings_path
-  else
-    flash[:error] = "Booking not approved"
-    # redirect_to bookings_path
-  end
+  # def approve
+  # @booking = Booking.find(params[:id])
+  # @booking.update(state: "approved")
+  # if @booking.state == "approved"
+  #   flash[:success] = "Booking successfully approved"
+  #   # redirect_to bookings_path
+  # else
+  #   flash[:error] = "Booking not approved"
+  #   # redirect_to bookings_path
+  # end
 
   private
 
