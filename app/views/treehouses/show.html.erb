@@ -9,6 +9,16 @@
       </div>
 </div>
 
+<h1><%= @treehouse.name %></h1>
+
+<!-- Other details about the Treehouse -->
+
+<div class="treehouse-photos">
+  <% @treehouse.photos.each do |photo| %>
+    <%= image_tag photo, class: "treehouse-photo" %>
+  <% end %>
+</div>
+
 <%= link_to "Book this treehouse", new_treehouse_booking_path(@treehouse) %>
 
 <%= link_to "Back home", treehouses_path %>
