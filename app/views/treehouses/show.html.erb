@@ -1,10 +1,15 @@
 <div class="treehouse-container">
 
   <div class="treehouse-photos" style="background-color: #FDF3DD;">
-    <% @treehouse.photos.each do |photo| %>
-      <%= cl_image_tag photo.key, class: "treehouse-photo" %>
+    <% if @treehouse.photos.attached? %>
+      <% @treehouse.photos.each do |photo| %>
+        <%= cl_image_tag photo.key, class: "treehouse-photo" %>
+      <% end %>
+    <% else %>
+      <%= image_tag "https://kagi.com/proxy/01bea499-dff1-4618-b280-65682467d22e.jpeg?c=yqa_QbD_fuPfUcCLZ--zkc3nkovo2J7QHCv3AAJUuF-tX3kib7TFXHVFYS5pCbXZbTMorMQMn4aTxiqr1U4CWqtoI5x5MLz3kH6iC_s6_z1zNqRKyBSvx_6patIWWfV56XOxBYY5KA0BiYD53Y8M5qnzWygPwZyFvFJiHRHXH68%3D", class: "treehouse-photo" %>
     <% end %>
   </div>
+
 
   <div class="treehouse-info" style="background-color: #FDF3DD;">
     <h1><%= @treehouse.name %></h1>
