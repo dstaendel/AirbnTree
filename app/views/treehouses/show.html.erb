@@ -15,9 +15,7 @@
     <p>Price: $<%= @treehouse.price %> per night</p>
     <%= link_to "Book this treehouse", new_treehouse_booking_path(@treehouse), class: "btn btn-primary" %>
     <%= link_to "Back home", treehouses_path, class: "btn btn-primary" %>
-    <%# <%= link_to "Edit treehouse", edit_treehouse_path(@treehouse), class: "btn btn-warning"
-    <%= link_to "Delete", treehouse_path(@treehouse), method: :delete, data: { confirm: "Are you sure you want to delete this treehouse?" }, class: "btn btn-danger" %>
+    <%= link_to "Edit treehouse", edit_treehouse_path(@treehouse), class: "btn btn-primary" %>
+    <%= link_to "Delete", treehouse_path(@treehouse), method: :delete, data: { confirm: "Are you sure you want to delete this treehouse?" }, class: "btn btn-primary" %>
   </div>
-
-
 </div>
