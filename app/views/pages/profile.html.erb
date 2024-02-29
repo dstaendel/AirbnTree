@@ -1,13 +1,26 @@
+<h3>My bookings:</h3>
 
-<% @bookings.each do |booking| %>
-  <div>
-    <li>
-      <h3>Booking</h3>
-      <p> From: <%= booking.start_date %> To: From: <%= booking.end_date %></p>
-    </li>
-  </div>
+<% if !@bookings.empty?%>
+  <% @bookings.each do |booking| %>
+    <div>
+      <li>
+        <p> From: <%= booking.start_date %> To: <%= booking.end_date %></p>
+      </li>
+    </div>
+  <% end %>
 <% end %>
 
 
+<h3>Booking requests:</h3>
 
-<%= link_to "Add treehouse", new_treehouse_path %>
+<% if !@incoming_bookings.empty?%>
+  <% @incoming_bookings.each do |incoming_booking| %>
+    <div>
+      <li>
+        <p> From: <%= incoming_booking.start_date %> To: <%= incoming_booking.end_date %></p>
+          <%# // Accept Button with Update function of pending status - Editing the model Short form with changing status param.
+          // Reject Button %>
+      </li>
+    </div>
+  <% end %>
+<% end %>

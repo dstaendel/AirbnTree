@@ -3,10 +3,8 @@ class PagesController < ApplicationController
   end
 
   def profile
-    @bookings = Booking.where(user: current_user)
-    # @user = current_user
-    # @bookings.user =
-    @my_treehouses = Treehouse.where(user: current_user)
-    @incoming_bookings = @my_treehouses.select { |treehouse| treehouse.booking == "pending"}
+    @bookings = Booking.where(user_id: current_user.id)
+    @my_treehouses = Treehouse.where(user_id: current_user.id)
+    @incoming_bookings = Booking.where(treehouse_id: @my_treehouses.pluck(:id), status: "pending")
   end
 end
