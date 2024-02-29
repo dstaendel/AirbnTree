@@ -18,8 +18,8 @@
     <div>
       <li>
         <p> From: <%= incoming_booking.start_date %> To: <%= incoming_booking.end_date %></p>
-          <%# // Accept Button with Update function of pending status - Editing the model Short form with changing status param.
-          // Reject Button %>
+        <%= link_to "Accept", booking_accept_path(incoming_booking), data: {turbo_method: :patch}%>
+        <%= link_to "Reject", booking_reject_path(incoming_booking), data: {turbo_method: :patch}%>
       </li>
     </div>
   <% end %>
