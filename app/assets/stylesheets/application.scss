@@ -90,3 +90,22 @@ main {
 .btn-secondary { background-color: #6c757d; }
 .btn-warning { background-color: #ffc107; }
 .btn-danger { background-color: #dc3545; }
+
+.add-treehouse-button-container {
+  display: flex;
+  justify-content: center; /* Centers the button horizontally */
+  margin-top: 20px; /* Adjusts spacing from the content above */
+}
+
+.btn-primary {
+  background-color: #007bff; /* Primary button color */
+  color: white; /* Text color */
+  padding: 10px 20px; /* Padding for larger button size */
+  text-decoration: none; /* Removes underline from the link */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.btn-primary:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+  color: #fff; /* Keeps text color white */
+}
