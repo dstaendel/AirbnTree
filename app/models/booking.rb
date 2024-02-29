@@ -2,5 +2,5 @@ class Booking < ApplicationRecord
   belongs_to :user
   belongs_to :treehouse
 
-  STATUS = ["pending", "accepted", "rejected"]
+  validates :status, inclusion: { in: %w(pending accepted rejected) }
 end
