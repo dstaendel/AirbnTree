@@ -15,6 +15,7 @@ class TreehousesController < ApplicationController
 
   def create
     @treehouse = Treehouse.new(treehouse_params)
+    @treehouse.user = current_user
 
     if @treehouse.save
       redirect_to treehouses_path, notice: "Your new Treehouse was successfully created."
