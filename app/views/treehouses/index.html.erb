@@ -1,3 +1,15 @@
+
+<div>
+  <%= form_with url: treehouses_path, method: :get, class: "form-search-index d-flex" do %>
+    <%= text_field_tag :query,
+          params[:query],
+          class: "form-control",
+          placeholder: "Search a keyword"
+      %>
+    <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
+  <% end %>
+</div>
+
 <div class="cards px-5">
   <% @treehouses.each do |treehouse| %>
     <% if treehouse.photos.attached? %>
