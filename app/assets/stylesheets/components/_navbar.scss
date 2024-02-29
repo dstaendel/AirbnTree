@@ -1,54 +1,42 @@
 .navbar-lewagon {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  background: rgba(255,243,218, 1);
-  border-radius: 40px;
-  justify-content: space-between; /* Distribute space between elements */
-  align-items: center; /* Align items vertically in the center */
-  padding: 10px;
-  margin-top: 10px;
+  background: rgba(255, 243, 218, 1); /* Same as .site-footer background */
+  color: rgb(95, 73, 177); /* Text color set in the footer's p */
 }
 
-#navbar-right-elements {
-  display: flex;
-  flex-direction: row;
-
-}
-
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
-}
-
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
-}
-
-button {
-  border-radius: 10%;
-  color: green;
-}
-
-nav{
-  padding: 20px;
-  text-align: right;
+.browse-trees-container {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .navbar-nav {
-  text-align: right;
-  font-size: 35px;
+  display: flex;
+  justify-content: flex-end;
 }
 
-#out{
-  color: #fff;
-  background-color: rgb(95,73,177);
-  padding: 20px;
-  text-decoration: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 100%;
+.navbar-nav #navbar-right-elements {
+  display: flex;
+  justify-content: flex-end;
 }
 
-#about, #browse, #out {
-  margin-right: 30px;
-  font-size: 30px;
+.nav-link:hover {
+  background-color: #f0f0f0; /* Slightly changes for hover effect */
+  border-radius: 5px; /* Rounded corners for a smoother look */
+}
+
+/* Specific styles for Browse Trees link */
+.browse-trees {
+  font-size: 20px; /* Larger font size */
+  font-weight: bold; /* Make the font weight bold */
+  color: rgb(95, 73, 177); /* Keeping consistent with the theme, but more noticeable */
+  padding: 5px 10px; /* Add some padding for better visibility */
+}
+
+.browse-trees:hover {
+  background-color: rgb(245, 233, 208); /* A lighter background on hover */
+  color: rgb(75, 53, 157); /* Darker color for text on hover to contrast with lighter background */
+  border-radius: 10px; /* Slightly larger border-radius for a more pronounced effect */
 }

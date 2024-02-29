@@ -17,16 +17,16 @@ class BookingsController < ApplicationController
     end
   end
 
-  def edit
+  def accept
     @booking = Booking.find(params[:id])
+    @booking.update_attribute(:status, "accepted")
+    redirect_to profile_path
   end
 
-  def update
+  def reject
     @booking = Booking.find(params[:id])
-    @booking.update(booking_params)
-    @booking.save
-    # redirect_to bookings_path(@booking.id)
-
+    @booking.update_attribute(:status, "rejected")
+    redirect_to profile_path
   end
 
   def destroy
@@ -35,17 +35,6 @@ class BookingsController < ApplicationController
     # redirect_to bookings_path, status: :see_other
   end
 
-  # def approve
-  # @booking = Booking.find(params[:id])
-  # @booking.update(state: "approved")
-  # if @booking.state == "approved"
-  #   flash[:success] = "Booking successfully approved"
-  #   # redirect_to bookings_path
-  # else
-  #   flash[:error] = "Booking not approved"
-  #   # redirect_to bookings_path
-  # end
-
   private
 
   # def set_booking
@@ -53,6 +42,6 @@ class BookingsController < ApplicationController
   # end
 
   def booking_params
-    params.require(:booking).permit(:start_date, :end_date, :price, :user_id, :treehouse_id)
+    params.require(:booking).permit(:start_date, :end_date, :price, :user_id, :status, :treehouse_id)
   end
 end
