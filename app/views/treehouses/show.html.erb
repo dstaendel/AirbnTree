@@ -1,10 +1,19 @@
 <div class="treehouse-container">
   <div class="treehouse-info">
     <h1 class="treehouse-title"><%= @treehouse.name %></h1>
+      <div class="treehouse-photos">
+    <% if @treehouse.photos.attached? %>
+      <% @treehouse.photos.each do |photo| %>
+        <%= cl_image_tag photo.key, class: "treehouse-photo" %>
+      <% end %>
+    <% else %>
+      <%= image_tag "default-photo-url", class: "treehouse-photo" %>
+    <% end %>
+  </div>
     <div class="treehouse-details">
       <p>Tree Type: <%= @treehouse.tree_type %></p>
       <p>Description: <%= @treehouse.summary %></p>
-      <p>Address: <%= @treehouse.address %></p>
+
       <p>Total occupancy: <%= @treehouse.total_occupancy %> guests</p>
       <p>Price: $<%= @treehouse.price %> per night</p>
     </div>
@@ -19,13 +28,7 @@
   </div>
 
   <div class="treehouse-photos">
-    <% if @treehouse.photos.attached? %>
-      <% @treehouse.photos.each do |photo| %>
-        <%= cl_image_tag photo.key, class: "treehouse-photo" %>
-      <% end %>
-    <% else %>
-      <%= image_tag "default-photo-url", class: "treehouse-photo" %>
-    <% end %>
+    <p>Address: <%= @treehouse.address %></p>
+        <%= js_map [{latitude: @treehouse.latitude, longitude: @treehouse.longitude}] %>
   </div>
-    <%= js_map [{latitude: @treehouse.latitude, longitude: @treehouse.longitude}] %>
 </div>
