@@ -13,7 +13,7 @@ user2 = User.create(first_name: "Carl", last_name: "Anderson", email: "anderson@
 puts "creating treehouses ..."
 
 file = URI.open("https://images.unsplash.com/photo-1566754844421-9bc834baf4a3?q=80&w=2224&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
-treehouse1 = Treehouse.create(name: "Treehouse of Horror", tree_type: "Oak tree", total_occupancy: 5, summary: "Simpsons themed treehouse", address: "Springfield", price: 100)
+treehouse1 = Treehouse.create(name: "Treehouse of Horror", tree_type: "Oak tree", total_occupancy: 5, summary: "Simpsons themed treehouse", address: "Springfield", price: 100, latitude: 48.8649574, longitude: 2.3800617 )
 treehouse1.user = user1
 treehouse1.photos.attach(io: file, filename: "example1.png", content_type: "image/png")
 treehouse1.save
