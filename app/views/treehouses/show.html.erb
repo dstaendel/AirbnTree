@@ -18,6 +18,7 @@
       <p>Price: $<%= @treehouse.price %> per night</p>
     </div>
     <div class="treehouse-actions">
+      
       <%= link_to "Book this treehouse", new_treehouse_booking_path(@treehouse), class: "btn btn-primary" %>
       <%= link_to "Back home", treehouses_path, class: "btn btn-secondary" %>
         <% if @treehouse.user == current_user %>
