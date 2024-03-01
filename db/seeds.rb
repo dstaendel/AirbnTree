@@ -74,10 +74,10 @@ treehouse10.save
 
 puts "creating bookings ..."
 
-booking1 = Booking.create(start_date: "", end_date: "", user_id: "", treehouse_id: "")
-booking2 = Booking.create(start_date: "", end_date: "", user_id: "", treehouse_id: "")
-booking3 = Booking.create(start_date: "", end_date: "", user_id: "", treehouse_id: "")
-booking4 = Booking.create(start_date: "", end_date: "", user_id: "", treehouse_id: "")
-booking5 = Booking.create(start_date: "", end_date: "", user_id: "", treehouse_id: "")
+booking1 = Booking.create(start_date: "Fri, 01 Mar 2024", end_date: "Sun, 07 Mar 2024", user_id: "1", treehouse_id: "7")
+booking2 = Booking.create(start_date: "Fri, 08 Mar 2024", end_date: "Sun, 14 Mar 2024", user_id: "1", treehouse_id: "8")
+booking3 = Booking.create(start_date: "Fri, 15 Mar 2024", end_date: "Sun, 21 Mar 2024", user_id: "1", treehouse_id: "9")
+booking4 = Booking.create(start_date: "Fri, 22 Mar 2024", end_date: "Sun, 28 Mar 2024", user_id: "2", treehouse_id: "1")
+booking5 = Booking.create(start_date: "Fri, 29 Mar 2024", end_date: "Sun, 31 Mar 2024", user_id: "2", treehouse_id: "2")
 
 puts "Creating done."
