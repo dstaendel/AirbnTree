@@ -140,3 +140,40 @@ main {
   position: relative; /* Adjust based on your layout needs */
   z-index: 5; /* Lower than the logo if overlapping issues occur */
 }
+
+.treehouse-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* 2 fractions for the left side, 1 fraction for the map */
+  gap: 20px; /* Adjust the space between columns */
+}
+
+.left-side {
+  display: flex;
+  flex-direction: column;
+}
+
+.right-side {
+  display: flex;
+  justify-content: center; /* Centers children horizontally in the flex container */
+  align-items: center; /* Centers children vertically in the flex container */
+  height: 100%; /* Ensure it stretches to the full height of the parent container */
+}
+
+
+
+.treehouse-info, .treehouse-photos {
+  margin-bottom: 20px; /* Space between info and photos */
+}
+
+.treehouse-map {
+  height: 600px; /* Adjust based on your needs */
+  width: 100%; /* Ensures the map uses the full width of its container */
+  max-width: 300px; /* Or adjust to ensure the map doesn't stretch too wide */
+  /* Ensure the map container has a defined height */
+}
+
+@media (max-width: 768px) {
+  .treehouse-container {
+    grid-template-columns: 1fr; /* Stack columns vertically on small screens */
+  }
+}
