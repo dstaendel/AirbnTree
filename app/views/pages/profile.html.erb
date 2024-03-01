@@ -1,26 +1,29 @@
-<h3>My bookings:</h3>
+<div class="bookings-container">
+  <div class="bookings">
+    <h3>My bookings</h3>
+    <ul>
+      <% if !@bookings.empty? %>
+        <% @bookings.each do |booking| %>
+          <li>
+            <p>From: <%= booking.start_date %> To: <%= booking.end_date %></p>
+          </li>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
 
-<% if !@bookings.empty?%>
-  <% @bookings.each do |booking| %>
-    <div>
-      <li>
-        <p> From: <%= booking.start_date %> To: <%= booking.end_date %></p>
-      </li>
-    </div>
-  <% end %>
-<% end %>
-
-
-<h3>Booking requests:</h3>
-
-<% if !@incoming_bookings.empty?%>
-  <% @incoming_bookings.each do |incoming_booking| %>
-    <div>
-      <li>
-        <p> From: <%= incoming_booking.start_date %> To: <%= incoming_booking.end_date %></p>
-        <%= link_to "Accept", booking_accept_path(incoming_booking), data: {turbo_method: :patch}%>
-        <%= link_to "Reject", booking_reject_path(incoming_booking), data: {turbo_method: :patch}%>
-      </li>
-    </div>
-  <% end %>
-<% end %>
+  <div class="booking-requests">
+    <h3>Booking requests</h3>
+    <ul>
+      <% if !@incoming_bookings.empty? %>
+        <% @incoming_bookings.each do |incoming_booking| %>
+          <li>
+            <p>From: <%= incoming_booking.start_date %> To: <%= incoming_booking.end_date %></p>
+            <%= link_to "Accept", booking_accept_path(incoming_booking), data: { turbo_method: :patch }, class: "btn btn-accept" %>
+            <%= link_to "Reject", booking_reject_path(incoming_booking), data: { turbo_method: :patch }, class: "btn btn-reject" %>
+          </li>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
+</div>
