@@ -1,8 +1,11 @@
 class TreehousesController < ApplicationController
 
-
   def index
     @treehouses = Treehouse.all
+      if params[:query]
+        sql_query = "name ILIKE :query OR address ILIKE :query OR summary ILIKE :query"
+          @treehouses = @treehouses.where(sql_query, query: "%#{params[:query]}%")
+      end
   end
 
   def show
