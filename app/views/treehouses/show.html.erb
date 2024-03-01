@@ -27,4 +27,5 @@
       <%= image_tag "default-photo-url", class: "treehouse-photo" %>
     <% end %>
   </div>
+    <%= js_map [{latitude: @treehouse.latitude, longitude: @treehouse.longitude}] %>
 </div>
