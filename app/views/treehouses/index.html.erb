@@ -1,4 +1,9 @@
 
+<!-- Container for the Add Treehouse Button -->
+<div class="add-treehouse-button-container text-center mt-4">
+  <%= link_to "Add treehouse", new_treehouse_path, class: "btn btn-primary" %>
+</div>
+
 <div class="container">
   <div class="row">
     <% @treehouses.each do |treehouse| %>
@@ -25,9 +30,4 @@
       </div>
     <% end %>
   </div>
-</div>
-
-<!-- Container for the Add Treehouse Button -->
-<div class="add-treehouse-button-container text-center mt-4">
-  <%= link_to "Add treehouse", new_treehouse_path, class: "btn btn-primary" %>
 </div>
