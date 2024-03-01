@@ -1,9 +1,21 @@
 <nav class="navbar-lewagon">
-  <img class="navbar-brand" src="<%= asset_path('treelogo.png') %>" width="100" height="100" alt="">
-
+  <%= link_to treehouses_path do %>
+    <img class="navbar-brand" src="<%= asset_path('treelogo.png') %>" width="100" height="100" alt="">
+  <% end %>
   <!-- Centered Browse Trees Link -->
   <div class="browse-trees-container">
-    <%= link_to "Browse Trees", treehouses_path, class: "nav-link browse-trees" %>
+    <div>
+      <%= form_with url: treehouses_path, method: :get, class: "form-search-index d-flex" do %>
+        <%= text_field_tag :query,
+              params[:query],
+              class: "form-control",
+              placeholder: "Browse trees"
+          %>
+        <%= submit_tag "🔎", name: "", class: "btn btn-primary" %>
+      <% end %>
+    </div>
+
+    </div>
   </div>
 
   <div class="navbar-nav">
