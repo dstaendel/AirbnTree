@@ -1,11 +1,14 @@
 <div class="bookings-container">
   <div class="bookings">
-    <h3>My bookings</h3>
+    <h3>Your future treehouse trips:</h3>
     <ul>
       <% if !@bookings.empty? %>
         <% @bookings.each do |booking| %>
           <li>
-            <p>From: <%= booking.start_date %> To: <%= booking.end_date %></p>
+            <div>
+              <p>From: <%= booking.start_date %> To: <%= booking.end_date %></p>
+              <p>Status: <%= booking.status %></p>
+            </div>
           </li>
         <% end %>
       <% end %>
@@ -13,7 +16,7 @@
   </div>
 
   <div class="booking-requests">
-    <h3>Booking requests</h3>
+    <h3>Incoming booking requests:</h3>
     <ul>
       <% if !@incoming_bookings.empty? %>
         <% @incoming_bookings.each do |incoming_booking| %>
