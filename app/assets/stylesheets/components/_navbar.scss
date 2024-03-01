@@ -27,7 +27,6 @@
   border-radius: 5px; /* Rounded corners for a smoother look */
 }
 
-/* Specific styles for Browse Trees link */
 .browse-trees {
   font-size: 20px; /* Larger font size */
   font-weight: bold; /* Make the font weight bold */
@@ -74,4 +73,22 @@
   background-color: #7454cc;
   color: white;
 
+}
+
+#navbar-right-elements {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  list-style: none;
+}
+
+.nav-item {
+  margin-right: 10px; /* Adds some space between the buttons */
+}
+
+.nav-link.btn {
+  text-decoration: none;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 5px;
 }
