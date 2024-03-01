@@ -54,30 +54,29 @@ treehouse7.user = user2
 treehouse7.photos.attach(io: file, filename: "example7.png", content_type: "image/png")
 treehouse7.save
 
-file = URI.open("https://images.unsplash.com/photo-1638519944713-cc630e072dff?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
-treehouse8 = Treehouse.create(name: "The Treetop Outpost", tree_type: "Redwood tree", total_occupancy: 2, summary: "Calm and beatiful treehouse", address: "Stuttgart", price: 100)
-treehouse8.user = user2
-treehouse8.photos.attach(io: file, filename: "example8.png", content_type: "image/png")
-treehouse8.save
+# file = URI.open("https://images.unsplash.com/photo-1638519944713-cc630e072dff?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+# treehouse8 = Treehouse.create(name: "The Treetop Outpost", tree_type: "Redwood tree", total_occupancy: 2, summary: "Calm and beatiful treehouse", address: "Stuttgart", price: 100)
+# treehouse8.user = user2
+# treehouse8.photos.attach(io: file, filename: "example8.png", content_type: "image/png")
+# treehouse8.save
 
-file = URI.open("https://images.unsplash.com/photo-1521401830884-6c03c1c87ebb?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
-treehouse9 = Treehouse.create(name: "The Leafy Lookout", tree_type: "Oak tree", total_occupancy: 3, summary: "The best treehouse in Congo", address: "Congo Forest", price: 80)
-treehouse9.user = user2
-treehouse9.photos.attach(io: file, filename: "example9.png", content_type: "image/png")
-treehouse9.save
+# file = URI.open("https://images.unsplash.com/photo-1521401830884-6c03c1c87ebb?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+# treehouse9 = Treehouse.create(name: "The Leafy Lookout", tree_type: "Oak tree", total_occupancy: 3, summary: "The best treehouse in Congo", address: "Congo Forest", price: 80)
+# treehouse9.user = user2
+# treehouse9.photos.attach(io: file, filename: "example9.png", content_type: "image/png")
+# treehouse9.save
 
-file = URI.open("https://images.unsplash.com/photo-1547393429-098dd122091a?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
-treehouse10 = Treehouse.create(name: "The Arboreal Adventure", tree_type: "Cedar tree", total_occupancy: 4, summary: "Perfect treeehouse to bring the kids", address: "Minesota", price: 100)
-treehouse10.user = user2
-treehouse10.photos.attach(io: file, filename: "example10.png", content_type: "image/png")
-treehouse10.save
+# file = URI.open("https://images.unsplash.com/photo-1547393429-098dd122091a?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+# treehouse10 = Treehouse.create(name: "The Arboreal Adventure", tree_type: "Cedar tree", total_occupancy: 4, summary: "Perfect treeehouse to bring the kids", address: "Minesota", price: 100)
+# treehouse10.user = user2
+# treehouse10.photos.attach(io: file, filename: "example10.png", content_type: "image/png")
+# treehouse10.save
 
 puts "creating bookings ..."
 
-booking1 = Booking.create(start_date: "Fri, 01 Mar 2024", end_date: "Sun, 07 Mar 2024", user_id: "1", treehouse_id: "7")
-booking2 = Booking.create(start_date: "Fri, 08 Mar 2024", end_date: "Sun, 14 Mar 2024", user_id: "1", treehouse_id: "8")
-booking3 = Booking.create(start_date: "Fri, 15 Mar 2024", end_date: "Sun, 21 Mar 2024", user_id: "1", treehouse_id: "9")
-booking4 = Booking.create(start_date: "Fri, 22 Mar 2024", end_date: "Sun, 28 Mar 2024", user_id: "2", treehouse_id: "1")
-booking5 = Booking.create(start_date: "Fri, 29 Mar 2024", end_date: "Sun, 31 Mar 2024", user_id: "2", treehouse_id: "2")
+booking1 = Booking.create(start_date: "Fri, 01 Mar 2024", end_date: "Sun, 07 Mar 2024", user_id: "1", treehouse_id: "6")
+booking2 = Booking.create(start_date: "Fri, 08 Mar 2024", end_date: "Sun, 14 Mar 2024", user_id: "1", treehouse_id: "7")
+booking3 = Booking.create(start_date: "Fri, 22 Mar 2024", end_date: "Sun, 28 Mar 2024", user_id: "2", treehouse_id: "1")
+booking4 = Booking.create(start_date: "Fri, 29 Mar 2024", end_date: "Sun, 31 Mar 2024", user_id: "2", treehouse_id: "2")
 
 puts "Creating done."

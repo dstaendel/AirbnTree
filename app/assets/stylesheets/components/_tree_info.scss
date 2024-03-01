@@ -29,15 +29,21 @@ div.treehouse-container {
   max-width: 100%;
   height: auto;
   display: block;
+  font-size: 20px;
+  display: block;
+    margin-left: auto;
+    margin-right: auto
 }
+
+
 
 .treehouse-title {
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 .treehouse-details p {
-  font-size: 18px;
+  font-size: 20px;
   margin: 10px 0;
 }
 

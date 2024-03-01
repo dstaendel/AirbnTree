@@ -1,7 +1,7 @@
 <div class="treehouse-container">
   <div class="treehouse-info">
     <h1 class="treehouse-title"><%= @treehouse.name %></h1>
-      <div class="treehouse-photos">
+      <div class="treehouse-photos" style="background-color: #edd8ab;">
     <% if @treehouse.photos.attached? %>
       <% @treehouse.photos.each do |photo| %>
         <%= cl_image_tag photo.key, class: "treehouse-photo" %>
@@ -11,15 +11,15 @@
     <% end %>
   </div>
     <div class="treehouse-details">
-      <p>Tree Type: <%= @treehouse.tree_type %></p>
-      <p>Description: <%= @treehouse.summary %></p>
+      <p><strong>Tree Type:</strong> <%= @treehouse.tree_type %></p>
+      <p><strong>Description:</strong> <%= @treehouse.summary %></p>
 
-      <p>Total occupancy: <%= @treehouse.total_occupancy %> guests</p>
-      <p>Price: $<%= @treehouse.price %> per night</p>
+      <p><strong>Total occupancy:</strong> <%= @treehouse.total_occupancy %> guests</p>
+      <p><strong>Price:</strong> $<%= @treehouse.price %> per night</p>
     </div>
     <div class="treehouse-actions">
       <%= link_to "Book this treehouse", new_treehouse_booking_path(@treehouse), class: "btn btn-primary" %>
-      <%= link_to "Back home", treehouses_path, class: "btn btn-secondary" %>
+      <%# <%= link_to "Back home", treehouses_path, class: "btn btn-secondary" %>
       <%= link_to "Edit treehouse", edit_treehouse_path(@treehouse), class: "btn btn-secondary" %>
       <%= link_to treehouse_path(@treehouse), method: :delete, data: { confirm: "Are you sure you want to delete this treehouse?" }, class: "btn btn-danger" do %>
         <i class="fas fa-trash-alt"></i>
@@ -28,7 +28,7 @@
   </div>
 
   <div class="treehouse-photos">
-    <p>Address: <%= @treehouse.address %></p>
+    <p><strong>🏕️ Address:</strong> <%= @treehouse.address %></p>
         <%= js_map [{latitude: @treehouse.latitude, longitude: @treehouse.longitude}] %>
   </div>
 </div>
