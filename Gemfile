@@ -79,3 +79,7 @@ gem "devise"
 
   # Connects cloudinary to our app
 gem "cloudinary"
+
+gem "mapkick-rb"
+
+gem "geocoder"
