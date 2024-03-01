@@ -1,28 +1,4 @@
-<<<<<<< HEAD
 
-<div>
-  <%= form_with url: treehouses_path, method: :get, class: "form-search-index d-flex" do %>
-    <%= text_field_tag :query,
-          params[:query],
-          class: "form-control",
-          placeholder: "Search a keyword"
-      %>
-    <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
-  <% end %>
-</div>
-
-<div class="cards px-5">
-  <% @treehouses.each do |treehouse| %>
-    <% if treehouse.photos.attached? %>
-      <!-- Card with Photo -->
-      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path treehouse.photos[0].key, height: 300, crop: :fill %>')">
-        <%= link_to treehouse.name, treehouse_path(treehouse) %>
-      </div>
-    <% else %>
-      <!-- Card with Default Image -->
-      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= "https://kagi.com/proxy/01bea499-dff1-4618-b280-65682467d22e.jpeg?c=yqa_QbD_fuPfUcCLZ--zkc3nkovo2J7QHCv3AAJUuF-tX3kib7TFXHVFYS5pCbXZbTMorMQMn4aTxiqr1U4CWqtoI5x5MLz3kH6iC_s6_z1zNqRKyBSvx_6patIWWfV56XOxBYY5KA0BiYD53Y8M5qnzWygPwZyFvFJiHRHXH68%3D" %>", style: "height: 300px") %>
-        <%= link_to treehouse.name, treehouse_path(treehouse) %>
-=======
 <div class="container">
   <div class="row">
     <% @treehouses.each do |treehouse| %>
@@ -46,7 +22,6 @@
             <h5 class="card-trip-pricing text-muted">€<%= treehouse.price %></h5>
           </div>
         </div>
->>>>>>> master
       </div>
     <% end %>
   </div>

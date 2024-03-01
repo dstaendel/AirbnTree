@@ -79,6 +79,3 @@ gem "devise"
 
   # Connects cloudinary to our app
 gem "cloudinary"
-
-# Search gem
-gem "pg_search"
