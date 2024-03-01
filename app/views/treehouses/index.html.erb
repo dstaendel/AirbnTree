@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <div>
   <%= form_with url: treehouses_path, method: :get, class: "form-search-index d-flex" do %>
@@ -21,9 +22,34 @@
       <!-- Card with Default Image -->
       <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= "https://kagi.com/proxy/01bea499-dff1-4618-b280-65682467d22e.jpeg?c=yqa_QbD_fuPfUcCLZ--zkc3nkovo2J7QHCv3AAJUuF-tX3kib7TFXHVFYS5pCbXZbTMorMQMn4aTxiqr1U4CWqtoI5x5MLz3kH6iC_s6_z1zNqRKyBSvx_6patIWWfV56XOxBYY5KA0BiYD53Y8M5qnzWygPwZyFvFJiHRHXH68%3D" %>", style: "height: 300px") %>
         <%= link_to treehouse.name, treehouse_path(treehouse) %>
+=======
+<div class="container">
+  <div class="row">
+    <% @treehouses.each do |treehouse| %>
+      <div class="col-md-3 mb-3">
+        <div class="card h-100">
+          <!-- Card Image -->
+          <% if treehouse.photos.attached? %>
+            <%= image_tag(cl_image_path(treehouse.photos[0].key, height: 300, crop: :fill), class: 'card-img-top') %>
+          <% else %>
+            <%= image_tag("https://kagi.com/proxy/01bea499-dff1-4618-b280-65682467d22e.jpeg", class: 'card-img-top') %>
+          <% end %>
+
+          <!-- Card Body -->
+          <div class="card-body">
+            <%= link_to treehouse.name, treehouse_path(treehouse), class: 'card-title h5' %>
+            <p class="card-text"><%= treehouse.summary %></p>
+          </div>
+
+          <!-- Card Footer for Pricing -->
+          <div class="card-footer" id="price">
+            <h5 class="card-trip-pricing text-muted">€<%= treehouse.price %></h5>
+          </div>
+        </div>
+>>>>>>> master
       </div>
     <% end %>
-  <% end %>
+  </div>
 </div>
 
 <!-- Container for the Add Treehouse Button -->
