@@ -1,1 +1,1 @@
-Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
+Airbnb clone that allows the user to find, offer, and rent tree houses all over the world. Written in Ruby on Rails 💎. 
